@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add event listener to form submission
   form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent page refresh
+    event.preventDefault(); // Prevent page refresh 
 
     // Get the input value
     const taskInput = document.getElementById("new-task-description");
     const taskText = taskInput.value;
 
-    if (taskText.trim() === "") return; // Ignore empty submissions
+    if (taskText.trim() === "") return;  // Ignore empty submissions
 
     // Create a new list item for the task
     const li = document.createElement("li");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Optional: Add a delete button to each task
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
-    deleteBtn.style.marginLeft = "20px";
+    deleteBtn.style.marginLeft = "40px";
     deleteBtn.addEventListener("click", () => {
       li.remove();
     });
